@@ -1,0 +1,260 @@
+/* --- Temel Ayarlar ve Renk Değişkenleri --- */
+:root {
+    --primary-red: #932323;     
+    --bg-cream: #FCF8F2;        
+    --bg-white: #FFFFFF;        
+    --text-dark: #333333;       
+    --text-gray: #666666;       
+    --gold: #D4AF37;            
+    --link-blue: #2B73D6;       
+    
+    --font-sans: 'Montserrat', sans-serif;
+    --font-script: 'Great Vibes', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    /* Önceki gri arkaplanı ve ortalama komutlarını kaldırdık */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Davetiye Konteyneri (Tam ekran yapısı) */
+.invitation-container {
+    width: 100%;
+    /* max-width sınırını kaldırdık ki ekranı tamamen kaplasın */
+}
+
+/* --- Ortak Sınıflar --- */
+.text-white { color: white; }
+.gold-text { color: var(--gold); }
+.dark-text { color: var(--text-dark) !important; }
+section { padding: 80px 20px; text-align: center; } /* Alanları biraz daha ferahlattık */
+
+.names-title {
+    font-family: var(--font-script);
+    font-size: 4.5rem; /* Tam ekranda daha büyük durması için artırdık */
+    font-weight: 400;
+    color: white;
+    margin: 15px 0;
+}
+
+.ampersand {
+    color: var(--gold);
+    font-size: 3rem;
+}
+
+.script-subtitle {
+    font-family: var(--font-script);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* --- Bölüm 1: Hero (Açılış Ekranı) --- */
+.section-hero {
+    background: linear-gradient(135deg, #7a1b1b, var(--primary-red));
+    /* min-height: 100vh ile ilk açılışta ekranı tamamen kaplamasını sağladık */
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.location-brief {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* --- Bölüm 2: Tarih --- */
+.section-date {
+    background-color: var(--bg-cream);
+    position: relative;
+}
+
+.date-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.calendar-link {
+    font-size: 1rem;
+    color: var(--text-gray);
+    text-decoration: underline;
+}
+
+.divider-ornament {
+    color: var(--gold);
+    font-size: 2rem;
+    margin: 30px 0;
+}
+
+.map-container {
+    margin-top: 30px;
+}
+
+.map-image {
+    width: 90%;
+    max-width: 600px; /* Harita çok devasa olmasın diye bir sınır koyduk */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.map-link {
+    display: block;
+    font-size: 1rem;
+    color: var(--link-blue);
+    text-decoration: none;
+}
+
+/* --- Bölüm 3: Detaylar --- */
+.section-details {
+    background-color: var(--bg-white);
+}
+
+.greeting-prefix {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+.guest-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.invitation-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.venue-details {
+    margin-top: 50px;
+}
+
+.hotel-link {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--link-blue);
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.address {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.time-details {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+/* --- Bölüm 4: Footer --- */
+.section-footer {
+    background-color: var(--bg-cream);
+    padding: 80px 20px 40px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #e29b9b;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--primary-red);
+}
+
+.logo-ring {
+    font-size: 1.5rem;
+}
+
+.credit {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-top: 30px;
+}
+
+/* --- Güncellenmiş Harita ve Buton Tasarımı --- */
+.map-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Harita ile buton arasındaki boşluk */
+}
+
+/* Etkileşimli harita ayarları */
+.map-iframe {
+    width: 90%;
+    max-width: 600px;
+    height: 300px; /* Haritanın yüksekliği */
+    border: none;
+    border-radius: 15px; /* Haritanın köşelerini yuvarlattık */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Haritaya şık bir gölge */
+}
+
+/* Harita Butonu Ayarları */
+.btn-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-red); /* Davetiyenin kendi kırmızısı */
+    color: var(--bg-white);
+    padding: 14px 32px;
+    border-radius: 30px; /* Hap şeklinde buton */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Hover efekti için yumuşak geçiş */
+    box-shadow: 0 5px 15px rgba(147, 35, 35, 0.4); /* Kırmızımsı gölge */
+}
+
+/* Butonun üzerine fare ile gelince (veya telefonda dokunulunca) olacaklar */
+.btn-map:hover {
+    background-color: var(--gold); /* Üzerine gelince altın sarısı olsun */
+    color: var(--text-dark); /* Yazı rengi koyulaşsın */
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5); /* Gölge sararsın ve büyüsün */
+    transform: translateY(-3px); /* Buton hafifçe yukarı kalksın */
+}
